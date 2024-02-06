@@ -6,7 +6,7 @@
 
 
 body {
-    background: linear-gradient(to right, #8259ea, #0ec2bf, #ffffff, #9b59b6);
+    background: linear-gradient(to right, #333399, #FF00Cc);
     min-height: 100vh;
 }
 
@@ -21,12 +21,16 @@ body {
 }
 
 .block {
-    padding-block: 6em;
-    padding-inline: 8em;
-    border: 1px solid white;
-  
-
+    padding-block: 8em;
+    padding-inline: 10em;
+    border: 10px solid white;
+    background-color: white;
+    color: black;
+    margin: 20px;
+    border-radius: 15px;
+    font-family: 'Ariel', sans-serif;
 }
+
 .row {
     display: flex;
     flex-direction: row;
