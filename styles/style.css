@@ -43,6 +43,26 @@ body {
     padding: 1.5rem 4rem;
 }
 
+@media (max-width:1060px){
+    .heading-container{
+        font-size: 1.4;
+    }
+    .quiz{
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
+        gap: 0.8rem;
+    }
+}
+@media (max-width:650px) {
+    .heading-container{
+        font-size: 1.2rem;
+    }
+    .quiz{
+        grid-template-rows: repeat(6,1fr);
+        grid-template-columns: repeat(1,1fr);
+        gap: 0.5rem;
+    }
+}
 .block {
     display: flex;
     color: hsl(0, 0%, 100%);
