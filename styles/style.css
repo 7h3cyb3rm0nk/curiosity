@@ -4,31 +4,118 @@
     box-sizing: border-box;
 }
 
-
 body {
-    background: linear-gradient(to right, #8259ea, #0ec2bf, #ffffff, #9b59b6);
-    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    background: hsl(242, 53%, 34%);
+    background-image: linear-gradient(95deg, hsl(242, 53%, 34%) 0%, hsl(195, 51%, 54%) 40%, hsl(276, 21%, 55%) 94%, hsl(262, 20%, 49%) 100%);
+    background-size: 300%;
+    animation: bg-animation 9s infinite alternate;
 }
 
+/* There is an idea if its cool try to implement it, to change the colour of the text inside article tag in each cycle , but the colours should be opposite of the body animation */
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
 
 .quiz {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items:center;
-   margin-block:8em;
-   height: 80vh;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    height: 100vh;
+    padding: 1.5rem 4rem;
 }
 
+@media (max-width:1060px){
+    .heading-container{
+        font-size: 1.3;
+        letter-spacing: 0.1rem;
+    }
+    .quiz{
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.3rem;
+    }
+    .block:hover,
+    .block:focus {
+        content: none;
+    }
+}
+@media (max-width:650px) {
+    .heading-container{
+        font-size: 1.1rem;
+        letter-spacing: 0.1rem;
+    }
+    .quiz{
+        grid-template-rows: repeat(6,1fr);
+        grid-template-columns: repeat(1,1fr);
+        gap: 1.2rem;
+    }
+    .block:hover,
+    .block:focus {
+        content: none;
+    }
+}
 .block {
-    padding-block: 6em;
-    padding-inline: 8em;
-    border: 1px solid white;
-  
-
-}
-.row {
     display: flex;
-    flex-direction: row;
+    color: hsl(0, 0%, 100%);
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    text-shadow: 1px 2px 2px #dcdcdc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.10);
+    transition: box-shadow 0.20s translateY 1.5s;
+}
 
+.block:hover,
+.block:focus {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.block:active {
+    transform: translateY(-4px);
+}
+
+.one {
+    background-color: hsl(221, 100%, 74%);
+}
+
+.two {
+    background-color: hsl(276, 54%, 50%);
+}
+
+.three {
+    background-color: hsl(275, 57%, 81%);
+}
+
+.four {
+    background-color: hsl(193, 78%, 73%);
+}
+
+.five {
+    background-color: hsl(291, 68%, 84%);
+}
+
+.six {
+    background-color: hsl(0, 0%, 81%);
 }
